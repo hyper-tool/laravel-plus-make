@@ -22,8 +22,8 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelPlus\\Make\\": "src/"
-        }
+            "LaravelPlusMake\\Framework\\": "src/"
+
     },
     "autoload-dev": {
         "psr-4": {
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "\\LaravelPlus\\Make\\MakeServiceProvider"
+                "\\LaravelPlusMake\\Framework\\MakeServiceProvider"
             ]
         }
     }

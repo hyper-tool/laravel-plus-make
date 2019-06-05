@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelPlus\Make\Controllers;
+namespace LaravelPlusMake\Framework\Controllers;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -43,7 +43,6 @@ class FrameworkController extends Controller
      * @param $framework
      * @param $framework_name
      * @param $is_delete
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function handle($framework, $framework_name, $is_delete)
     {
@@ -71,7 +70,6 @@ class FrameworkController extends Controller
     /**
      * @param $framework
      * @param $framework_name
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function create($framework, $framework_name): void
     {

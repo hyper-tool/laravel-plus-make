@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelPlus\Make;
+namespace LaravelPlusMake;
 
-use LaravelPlus\Make\Commands\Framework;
+use LaravelPlusMake\Framework\Commands\Framework;
 
 class InfyOmGeneratorServiceProvider extends ServiceProvider
 {

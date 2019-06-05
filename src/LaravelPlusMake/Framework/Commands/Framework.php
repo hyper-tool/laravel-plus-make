@@ -1,13 +1,13 @@
 <?php
 
-namespace LaravelPlus\Make\Commands;
+namespace LaravelPlusMake\Framework\Commands;
 
 use Illuminate\Console\Command;
-use LaravelPlus\Make\Controllers\FrameworkController;
+use LaravelPlusMake\Framework\Controllers\FrameworkController;
 
 /**
  * Class Framework
- * @package App\Console\Commands
+ * @package LaravelPlusMake\Framework\Commands
  */
 class Framework extends Command
 {
@@ -56,7 +56,7 @@ class Framework extends Command
     }
 
     /**
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     *
      */
     public function handle()
     {
