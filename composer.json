@@ -1,0 +1,40 @@
+{
+    "name": "php-tool/laravel-plus-make",
+    "description": "laravelPlus make framework",
+    "keywords": [
+        "laravel",
+        "laravelPlus"
+    ],
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "Ben Huang",
+            "email": "benhuang1024@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.8.*",
+        "illuminate/console": "5.8.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelPlus\\Make\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\LaravelPlus\\Make\\MakeServiceProvider"
+            ]
+        }
+    }
+}
