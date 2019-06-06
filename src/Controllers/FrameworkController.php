@@ -64,6 +64,10 @@ class FrameworkController extends Controller
         if (file_exists($file)) {
             unlink($file);
         }
+        if ('Controller' === $framework) {
+            $new_directory = base_path("resources/views/{$framework_name}");
+            exec("rm -rf {$new_directory}");
+        }
         usleep(300000);
     }
 
