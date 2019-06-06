@@ -2,7 +2,7 @@
 
 namespace PHPTool\LaravelPlusMake\Controllers;
 
-use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
 
 /**
  * Class FrameworkController
@@ -60,7 +60,7 @@ class FrameworkController extends Controller
     public function delete($framework, $framework_name)
     {
         [$framework_name, $file_path] = $this->init($framework, $framework_name);
-        $file = __DIR__ . "/../../{$file_path}/{$framework_name}{$framework}.php";
+        $file = app_path("{$file_path}/{$framework_name}{$framework}.php");
         if (file_exists($file)) {
             unlink($file);
         }
@@ -74,12 +74,16 @@ class FrameworkController extends Controller
     public function create($framework, $framework_name): void
     {
         [$framework_name, $file_path] = $this->init($framework, $framework_name);
-        $Storage = Storage::disk('local');
-        $body = $Storage->get("tmpl/framework/{$framework}.php");
-        $body = str_replace('Temp', $framework_name, $body);
-        $filename = __DIR__ . "/../../{$file_path}/{$framework_name}{$framework}.php";
-        if (! is_file($filename)) {
-            file_put_contents($filename, $body);
+        $body = file_get_contents(__DIR__ . "/../tmpl/framework/{$framework}.php");
+        $body_upd = str_replace('Temp', $framework_name, $body);
+        $file = app_path("{$file_path}/{$framework_name}{$framework}.php");
+        if (!is_file($file)) {
+            file_put_contents($file, $body_upd);
+        }
+        if ('Controller' === $framework) {
+            $old_directory = __DIR__ . "/../tmpl/views";
+            $new_directory = base_path("resources/views/{$framework_name}");
+            exec("cp {$old_directory} {$new_directory}");
         }
         usleep(300000);
     }
