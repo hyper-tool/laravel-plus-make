@@ -87,7 +87,7 @@ class FrameworkController extends Controller
         if ('Controller' === $framework) {
             $old_directory = __DIR__ . "/../tmpl/views";
             $new_directory = base_path("resources/views/{$framework_name}");
-            exec("cp {$old_directory} {$new_directory}");
+            exec("cp -r {$old_directory} {$new_directory}");
         }
         usleep(300000);
     }
