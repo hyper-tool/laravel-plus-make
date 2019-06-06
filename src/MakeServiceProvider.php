@@ -3,7 +3,7 @@
 namespace PHPTool\LaravelPlusMake;
 
 use Illuminate\Support\ServiceProvider;
-use LaravelPlusMake\Framework\Commands\Framework;
+use PHPTool\LaravelPlusMake\Commands\Framework;
 
 class MakeServiceProvider extends ServiceProvider
 {
