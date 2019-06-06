@@ -87,7 +87,6 @@ class Framework extends Command
         $basis = $this->option('basis');
         $is_delete = $this->option('delete');
         $is_delete or $is_delete = $this->option('D');
-        $is_non_auto = $this->option('non-auto');
         $non_map_model = $this->option('NonMapModel');
         return array($basis, $is_delete, $non_map_model);
     }
