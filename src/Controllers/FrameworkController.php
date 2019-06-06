@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelPlusMake\Framework\Controllers;
+namespace PHPTool\LaravelPlusMake\Controllers;
 
 use Illuminate\Support\Facades\Storage;
 

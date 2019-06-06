@@ -1,13 +1,13 @@
 <?php
 
-namespace LaravelPlusMake\Framework\Commands;
+namespace PHPTool\LaravelPlusMake\Commands;
 
 use Illuminate\Console\Command;
-use LaravelPlusMake\Framework\Controllers\FrameworkController;
+use PHPTool\LaravelPlusMake\Controllers\FrameworkController;
 
 /**
  * Class Framework
- * @package LaravelPlusMake\Framework\Commands
+ * @package PHPTool\LaravelPlusMake\Commands
  */
 class Framework extends Command
 {

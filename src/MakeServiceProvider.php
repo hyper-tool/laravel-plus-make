@@ -1,10 +1,11 @@
 <?php
 
-namespace LaravelPlusMake;
+namespace PHPTool\LaravelPlusMake;
 
+use Illuminate\Support\ServiceProvider;
 use LaravelPlusMake\Framework\Commands\Framework;
 
-class InfyOmGeneratorServiceProvider extends ServiceProvider
+class MakeServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
